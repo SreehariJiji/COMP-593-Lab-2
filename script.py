@@ -4,15 +4,19 @@ def main():
     about_me = {'full_name' : 'Sreehari Jiji',
                 'student_id': '10316483',
                 'pizza_toppings': ['BACON','PEPPORONI','SAUSAGE'] ,
-                'movies': [{'title': 'rocky', 'genre': 'Thriller'}] ,
-                          [{'title': 'rocky 2', 'genre': 'Thriller'}]
+                'movies': [{'title': 'rocky', 'genre': 'thriller'} ,
+                          {'title': 'rocky 2', 'genre': 'thriller'}]
                 }
 
     # TODO: Step 3 - Add another movie to the data structure
+    about_me = {}
+    about_me =[{'title': 'shrek 1', 'genre': 'comedy'}]
+
     
 # TODO: Step 4 - Function that prints student name and ID	
-def print_student_name_and_id(about_me):
-    print(str("Sreehari Jiji"))
+def print_student_name_and_id (about_me):
+    print (f'My name is (about_me)'full_name'')
+
     return
     
 # TODO: Step 5 - Function that adds pizza toppings to data structure
