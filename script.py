@@ -1,23 +1,38 @@
 def main():
 
-    # TODO: Created a complex data structure
+    # Created a complex data structure
     about_me = {'full_name' : 'Sreehari Jiji',
                 'student_id': '10316483',
                 'pizza_toppings': ['BACON','PEPPORONI','SAUSAGE'] ,
                 'movies': [{'title': 'rocky', 'genre': 'thriller'} ,
-                          {'title': 'rocky 2', 'genre': 'thriller'}]
+                {'title': 'rocky 2', 'genre': 'thriller'}]
                 }
 
-    # TODO: Step 3 - Add another movie to the data structure
-    about_me = {}
-    about_me =[{'title': 'shrek 1', 'genre': 'comedy'}]
+    # Step 3 - Added another movie to the data structure
+    about_me['movies'].append({'title': 'shrek', 'genre': 'comedy'})
+    
+    # printing student name and id
+    print_student_name_and_id(about_me)
 
     
-# TODO: Step 4 - Function that prints student name and ID	
-def print_student_name_and_id (about_me):
-    print (f'My name is (about_me)'full_name'')
+
+    
+# Step 4 - Created Function that prints student name and ID	
+def print_student_name_and_id (data_struct):
+
+    full_name = data_struct['full_name']
+
+    first_name = full_name.split(' ')[0]
+    
+    student_id = data_struct['student_id']
+
+    print(f"My name is {full_name}, but you can call me Lord {first_name}.")
+
+    print(f"My student ID is {student_id}.")
 
     return
+
+    
     
 # TODO: Step 5 - Function that adds pizza toppings to data structure
 def add_pizza_toppings(about_me, toppings):
