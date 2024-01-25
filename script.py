@@ -14,7 +14,9 @@ def main():
     # printing student name and id
     print_student_name_and_id(about_me)
 
-    
+    # printing and adding pizza toppings  
+    add_pizza_toppings(about_me, ['Pineapple', 'Hot peppers'])
+    print_pizza_toppings(about_me)
 
     
 # Step 4 - Created Function that prints student name and ID	
@@ -23,7 +25,7 @@ def print_student_name_and_id (data_struct):
     full_name = data_struct['full_name']
 
     first_name = full_name.split(' ')[0]
-    
+
     student_id = data_struct['student_id']
 
     print(f"My name is {full_name}, but you can call me Lord {first_name}.")
@@ -34,9 +36,13 @@ def print_student_name_and_id (data_struct):
 
     
     
-# TODO: Step 5 - Function that adds pizza toppings to data structure
+# Step 5 - Created Function that adds pizza toppings to data structure
 def add_pizza_toppings(about_me, toppings):
-    print()
+
+    about_me['pizza_toppings'].extend(toppings)
+
+    about_me['pizza_toppings'] = sorted(map(str.lower, about_me['pizza_toppings']))
+
     return
 
 # TODO: Step 6 - Function that prints bullet list of pizza toppings
