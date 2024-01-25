@@ -18,6 +18,8 @@ def main():
     add_pizza_toppings(about_me, ['Pineapple', 'Hot peppers'])
     print_pizza_toppings(about_me)
 
+    print_movie_genres(about_me)
+
     
 # Step 4 - Created Function that prints student name and ID	
 def print_student_name_and_id (data_struct):
@@ -30,7 +32,7 @@ def print_student_name_and_id (data_struct):
 
     print(f"My name is {full_name}, but you can call me Lord {first_name}.")
 
-    print(f"My student ID is {student_id}.")
+    print(f"My student ID is {student_id}.\n")
 
     return
 
@@ -45,19 +47,31 @@ def add_pizza_toppings(about_me, toppings):
 
     return
 
-# TODO: Step 6 - Created Function that prints bullet list of pizza toppings
+#Step 6 - Created Function that prints bullet list of pizza toppings
 def print_pizza_toppings(about_me):
 
     print("My favourite pizza toppings are:")
 
-    for topping in about_me['pizza_toppings']: print(f"- {topping}")
-
+    for topping in about_me['pizza_toppings']: 
+        print(f"- {topping}")
+    print()
     return
 
 
 
-# TODO: Step 7 - Function that prints comma-separated list of movie genres
+#Step 7 - Created Function that prints comma-separated list of movie genres
 def print_movie_genres(about_me):
+
+    genres = [movies['genre'] for movies in about_me['movies']]
+
+    commas = ', '.join(genres)
+
+    commas = commas.rsplit(', ', 1)
+
+    bonus = ' and '.join(commas)
+
+    print(f"I like to watch {bonus} movies.\n")
+
     return 
 
 # TODO: Step 8 - Function that prints comma-separated list of movie titles
